@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cobisi.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Cobisi.Net.IProxyClient">
+            <summary>
+            Defines methods to establish proxied connections to a proxy server.
+            </summary>
+        </member>
+        <member name="M:Cobisi.Net.IProxyClient.Connect(System.Net.IPEndPoint,System.Net.IPEndPoint)">
+            <summary>
+            Create a new proxied socket and connects it to the given endpoint, passing through the configured proxy server.
+            </summary>
+            <param name="localIPEndPoint">The local endpoint used to bind the new proxied socket.</param>
+            <param name="targetIPEndPoint">The target endpoint for the proxied connection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cobisi.Net.IProxyClient.ConnectExisting(System.Net.Sockets.Socket,System.Net.IPEndPoint)">
+            <summary>
+            Connects an existing socket to the given endpoint, passing through the configured proxy server.
+            </summary>
+            <param name="existingSocket">The existing socket to use while establishing the proxied connection.</param>
+            <param name="targetIPEndPoint">The target endpoint for the proxied connection.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!--Processed by Cobisi XmlDocFilter v0.2.4270.14316 on 1/13/2012 12:06:21 PM.-->
+<doc>
+  <assembly>
+    <name>Cobisi.Net.Proxy</name>
+  </assembly>
+  <members>
+    <member name="T:Cobisi.Net.Proxy.Exceptions.ProxyClientException">
+      <summary>
+            The exception that is thrown when an error in the network connection with the proxy server is detected.
+            </summary>
+    </member>
+    <member name="T:Cobisi.Net.Proxy.Exceptions.LicenseException">
+      <summary>
+            The exception that is thrown when the component detects an invalid license.
+            </summary>
+      <exclude />
+    </member>
+    <member name="T:Cobisi.Net.Proxy.Exceptions.ProxyException">
+      <summary>
+            The exception that is thrown when an error in the network connection with the proxy server is detected.
+            </summary>
+    </member>
+    <member name="T:Cobisi.Net.Proxy.HttpConnectProxy">
+      <summary>
+            Represents a proxy client that can be used to establish proxied connections to an HTTP-CONNECT proxy server.
+            </summary>
+    </member>
+    <member name="T:Cobisi.Net.Proxy.ProxyClient">
+      <summary>
+            Provides the abstract base class for proxy server configurations.
+            </summary>
+    </member>
+    <member name="P:Cobisi.Net.Proxy.ProxyClient.RuntimeLicenseKey">
+      <summary>
+            Gets or sets the runtime license key for the component, used to unlock the component after its tial period expires.
+            </summary>
+    </member>
+    <member name="P:Cobisi.Net.Proxy.ProxyClient.Username">
+      <summary>
+            Gets the configured username for the proxy server.
+            </summary>
+    </member>
+    <member name="P:Cobisi.Net.Proxy.ProxyClient.Password">
+      <summary>
+            Gets the configured password for the proxy server.
+            </summary>
+    </member>
+    <member name="P:Cobisi.Net.Proxy.ProxyClient.ServerIPEndPoint">
+      <summary>
+            The IP address and port which points to the desired proxy server.
+            </summary>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.HttpConnectProxy.#ctor(System.Net.IPEndPoint)">
+      <summary>
+            Constructs a new HTTP Connect proxy, using the specified endpoint.
+            </summary>
+      <param name="serverIPEndPoint">The IP address and port which points to the desired HTTP Connect proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.HttpConnectProxy.#ctor(System.Net.IPEndPoint,System.String,System.String)">
+      <summary>
+            Constructs a new HTTP Connect proxy, using the specified endpoint and credentials.
+            </summary>
+      <param name="serverIPEndPoint">The IP address and port which points to the desired proxy server.</param>
+      <param name="password">The password to use in order to authenticate at the proxy server.</param>
+      <param name="username">The username to use in order to authenticate at the proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.HttpConnectProxy.ToString">
+      <summary>
+            Returns a textual representation of the HTTP Connect proxy configuration.
+            </summary>
+    </member>
+    <member name="T:Cobisi.Net.Proxy.Socks4Proxy">
+      <summary>
+            Represents a proxy client that can be used to establish proxied connections to a SOCKS 4 or SOCKS 4a proxy server.
+            </summary>
+    </member>
+    <member name="F:Cobisi.Net.Proxy.Socks4Proxy.DEFAULT_SOCKS_PORT">
+      <summary>
+            The default SOCKS 4/4a network connection port.
+            </summary>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks4Proxy.#ctor(System.Net.IPEndPoint)">
+      <summary>
+            Constructs a new SOCKS 4/4a proxy, using the specified endpoint.
+            </summary>
+      <param name="serverIPEndPoint">The IP address and port which points to the desired SOCKS 4/4a proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks4Proxy.#ctor(System.Net.IPAddress)">
+      <summary>
+            Constructs a new SOCKS 4/4a proxy, using the specified IP address and the <see cref="F:Cobisi.Net.Proxy.Socks4Proxy.DEFAULT_SOCKS_PORT">default SOCKS port</see>.
+            </summary>
+      <param name="serverIPAddress">The IP address for the target SOCKS 4/4a proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks4Proxy.#ctor(System.Net.IPEndPoint,System.String)">
+      <summary>
+            Constructs a new SOCKS 4/4a proxy, using the specified proxy server endpoint and username for authentication.
+            </summary>
+      <param name="serverIPEndPoint">The IP address and port which points to the desired SOCKS 4/4a proxy server.</param>
+      <param name="username">The username to use in order to login at the proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks4Proxy.#ctor(System.Net.IPAddress,System.String)">
+      <summary>
+            Constructs a new SOCKS 4/4a proxy, using the specified IP address, the <see cref="F:Cobisi.Net.Proxy.Socks4Proxy.DEFAULT_SOCKS_PORT">default SOCKS port</see> and username for authentication.
+            </summary>
+      <param name="serverIPAddress">The IP address which points to the desired SOCKS 4/4a proxy server.</param>
+      <param name="username">The username to use in order to login at the proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks4Proxy.ToString">
+      <summary>
+            Returns a textual representation of the SOCKS 4/4a proxy.
+            </summary>
+    </member>
+    <member name="T:Cobisi.Net.Proxy.Socks5Proxy">
+      <summary>
+            Represents a proxy client that can be used to establish proxied connections to a SOCKS 5 proxy server.
+            </summary>
+    </member>
+    <member name="F:Cobisi.Net.Proxy.Socks5Proxy.DEFAULT_SOCKS_PORT">
+      <summary>
+            The default SOCKS 5 network connection port.
+            </summary>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks5Proxy.#ctor(System.Net.IPEndPoint)">
+      <summary>
+            Constructs a new SOCKS 5 proxy, using the specified endpoint.
+            </summary>
+      <param name="serverIPEndPoint">The IP address and port which points to the desired SOCKS 5 proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks5Proxy.#ctor(System.Net.IPAddress)">
+      <summary>
+            Constructs a new SOCKS 5 proxy, using the specified IP address and the <see cref="F:Cobisi.Net.Proxy.Socks5Proxy.DEFAULT_SOCKS_PORT">default SOCKS port</see>.
+            </summary>
+      <param name="serverIPAddress">The IP address which points to the desired SOCKS 5 proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks5Proxy.#ctor(System.Net.IPEndPoint,System.String,System.String)">
+      <summary>
+            Constructs a new SOCKS 5 proxy, using the specified endpoint and username for authentication.
+            </summary>
+      <param name="serverIPEndPoint">The IP address and port which points to the desired SOCKS 5 proxy server.</param>
+      <param name="username">The username to use in order to login at the proxy server.</param>
+      <param name="password">The password to use in order to login at the proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks5Proxy.#ctor(System.Net.IPAddress,System.String,System.String)">
+      <summary>
+            Constructs a new SOCKS 5 proxy, using the specified IP address, the <see cref="F:Cobisi.Net.Proxy.Socks5Proxy.DEFAULT_SOCKS_PORT">default SOCKS port</see>
+            and credentials for authentication.
+            </summary>
+      <param name="serverIPAddress">The IP address which points to the desired SOCKS 5 proxy server.</param>
+      <param name="username">The username to use in order to login at the proxy server.</param>
+      <param name="password">The password to use in order to login at the proxy server.</param>
+    </member>
+    <member name="M:Cobisi.Net.Proxy.Socks5Proxy.ToString">
+      <summary>
+            Returns a textual representation for the SOCKS 5 proxy.
+            </summary>
+    </member>
+  </members>
+</doc>
